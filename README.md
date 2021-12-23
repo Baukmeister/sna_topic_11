@@ -1,4 +1,5 @@
 # sna_topic_11
+
 Exercise regarding link prediction on a data set of "Der Standard"
 
 ## Dataset files
@@ -15,3 +16,13 @@ You should have the following dataset files in place:
 ./data/Following_Ignoring_Relationships_01052019_31052019.csv
 ```
 
+## Setup workspace
+
+Make sure you have installed `conda` and `pip`.
+Run the following commands to create a new conda environment "SNS_2021W" using Python 3.9 and the libraries defined in `"requirements4pip.txt"`.
+
+```bash
+conda create -n "SNS_2021W" python=3.9 -y
+conda activate SNS_2021W
+pip install -r requirements4pip.txt
+```
