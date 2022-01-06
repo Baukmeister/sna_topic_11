@@ -134,3 +134,6 @@ dmypy.json
 /data/Following_Ignoring_Relationships_01052019_31052019.csv
 .idea/.gitignore
 .idea/
+data/engineered_features/
+data/
+output/
