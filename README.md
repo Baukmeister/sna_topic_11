@@ -1,6 +1,12 @@
 # sna_topic_11
 
-Exercise regarding link prediction on a data set of "Der Standard"
+Exercise regarding link prediction on a data set of "Der Standard".
+
+Authors:
+* Steindl Bernhard (01529136)
+* Maliakel Paul Joe (12012422)
+* Louis-Alexandre Dit Petit-Frere Judith (12024728)
+* Bauernfeind Florian(11775814)
 
 ## Dataset files
 
@@ -26,3 +32,17 @@ conda create -n "SNS_2021W" python=3.9 -y
 conda activate SNS_2021W
 pip install -r requirements4pip.txt
 ```
+
+## Project structure
+
+The next table explains what the Jupyter notebooks are doing and how the project structure looks like.
+
+| File or Folder | Description |
+|--------------|-----------|
+| `sna_preprocessing_commented.ipynb` | Contains code for pre-processing, feature extraction (graph-based and node-based TF-IDF features) and result serialization for the **Commented relation**. |
+| `sna_preprocessing_common_interest.ipynb` | Contains code for pre-processing, graph-based feature extraction and result serialization for the **Like relation**. |
+| `sna_preprocessing_like.ipynb` | Contains code for pre-processing and graph-based feature extraction for the **Common-Interest relation**. |
+| `link_prediction.ipynb` | This notebook implements the machine learning pipeline for predicting links in our social networks. It loads features of the three relations (like, commented and common-interest), pre-processes the data (downsampling, resampling, train-test split etc.), trains and evaluates using machine learning classifiers. |
+| `data/` | Folder used for storing *derStandard* datasets (see Dataset files). Also used for storing serializations of graph-based features by the notebooks `sna_preprocessing_like.ipynb` and `sna_preprocessing_common_interest.ipynb`. |
+| `output/` | Folder used by `sna_preprocessing_commented.ipynb` for serialization of graph-based and node-based features, as well as intermediate outputs from NLP operations. |
+| `data/engineered_features` | Folder is used by `link_prediction.ipynb` containing only those feature serializations (either as csv or pickle files) necessary for running experiments with our machine learning pipeline. |
