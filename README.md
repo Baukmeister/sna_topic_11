@@ -40,8 +40,8 @@ The next table explains what the Jupyter notebooks are doing and how the project
 | File or Folder | Description |
 |--------------|-----------|
 | `sna_preprocessing_commented.ipynb` | Contains code for pre-processing, feature extraction (graph-based and node-based TF-IDF features) and result serialization for the **Commented relation**. |
-| `sna_preprocessing_common_interest.ipynb` | Contains code for pre-processing, graph-based feature extraction and result serialization for the **Like relation**. |
-| `sna_preprocessing_like.ipynb` | Contains code for pre-processing and graph-based feature extraction for the **Common-Interest relation**. |
+| `sna_preprocessing_common_interest.ipynb` | Contains code for pre-processing, graph-based feature extraction and result serialization for the **Common-Interest relation**. |
+| `sna_preprocessing_like.ipynb` | Contains code for pre-processing and graph-based feature extraction for the **Like relation**. |
 | `link_prediction.ipynb` | This notebook implements the machine learning pipeline for predicting links in our social networks. It loads features of the three relations (like, commented and common-interest), pre-processes the data (downsampling, resampling, train-test split etc.), trains and evaluates using machine learning classifiers. |
 | `data/` | Folder used for storing *derStandard* datasets (see Dataset files). Also used for storing serializations of graph-based features by the notebooks `sna_preprocessing_like.ipynb` and `sna_preprocessing_common_interest.ipynb`. |
 | `output/` | Folder used by `sna_preprocessing_commented.ipynb` for serialization of graph-based and node-based features, as well as intermediate outputs from NLP operations. |
